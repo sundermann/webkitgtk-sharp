@@ -3,5 +3,5 @@
 	<add-node path="/api"><include xml="/usr/share/gapi-3.0/soup-sharp-api.xml" /></add-node>
 	<attr path="/api/namespace/object[@name='WebView']/implements/interface[@cname='GtkBuildable']" name="hidden">true</attr>
 	<attr path="/api/namespace/object[@name='WebView']/implements/interface[@cname='AtkImplementorIface']" name="cname">AtkImplementor</attr>
-	<attr path="/api/namespace//object/field[@cname='parent_instance'] name="hidden">true</attr>
+	<attr path="/api/namespace//object/field[@cname='parent_instance']" name="hidden">true</attr>
 </metadata>
