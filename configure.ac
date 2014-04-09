@@ -1,4 +1,4 @@
-AC_INIT([webkitgtk-sharp], [2.3.91])
+AC_INIT([webkitgtk-sharp], [2.0.0])
 AC_CONFIG_SRCDIR([README])
 AC_CANONICAL_TARGET
 AM_INIT_AUTOMAKE
@@ -8,14 +8,14 @@ LT_INIT
 
 dnl Package settings
 ASSEMBLY_COMPANY=""
-ASSEMBLY_COPYRIGHT="2012 Andreia Gaita"
+ASSEMBLY_COPYRIGHT="2014 Andreia Gaita & Stephan Sundermann"
 ASSEMBLY_DESCRIPTION="webkitgtk bindings for Mono"
 ASSEMBLY_NAME="webkitgtk-sharp"
 ASSEMBLY_NAMESPACE="WebKit"
 ASSEMBLY_PC="webkitgtk-sharp-3.0"
 ASSEMBLY_SHORTNAME="webkitgtk"
 ASSEMBLY_TITLE="WebKit#"
-ASSEMBLY_VERSION="2.3.91"
+ASSEMBLY_VERSION="2.0.0"
 AC_SUBST([ACLOCAL_AMFLAGS], ["-I m4 \${ACLOCAL_FLAGS}"])
 
 AC_SUBST(ASSEMBLY_NAME)
