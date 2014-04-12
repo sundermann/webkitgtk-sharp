@@ -8,7 +8,7 @@ libwebkitgtksharpglue_1_10_2_la_LDFLAGS = -module -avoid-version -no-undefined
 
 libwebkitgtksharpglue_1_10_2_la_LIBADD = $(WEBKIT_LIBS)
 
-INCLUDES = $(WEBKIT_CFLAGS) -I$(top_srcdir)
+AM_CPPFLAGS = $(WEBKIT_CFLAGS) -I$(top_srcdir)
 
 libwebkitgtksharpglue.dll: $(libwebkitgtksharpglue_1_10_2_la_OBJECTS) libwebkitgtksharpglue.rc libwebkitgtksharpglue.def
 	./build-dll libwebkitgtksharpglue $(VERSION)
