@@ -1,4 +1,4 @@
-AC_INIT([webkitgtk-sharp], [2.0.0])
+AC_INIT(webkitgtk-sharp, [2.0.0])
 AC_CONFIG_SRCDIR([README])
 AC_CANONICAL_TARGET
 AM_INIT_AUTOMAKE
