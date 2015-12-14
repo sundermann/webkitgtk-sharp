@@ -123,8 +123,9 @@ AC_SUBST(GAPI_CODEGEN)
 
 dnl Check for monodoc
 AC_PATH_PROG(MDASSEMBLER, mdassembler, no)
-AC_PATH_PROG(MONODOCER, monodocer, no)
-if test "x$MONODOCER" = "xno" -o "x$MDASSEMBLER" = "xno"; then
+AC_PATH_PROG(MDOC, mdoc, no)
+if test "$MDOC" = "no" -o "$MDASSEMBLER" = "no"
+then
 	enable_monodoc=no
 	doc_sources_dir=
 else
@@ -132,7 +133,7 @@ else
 	doc_sources_dir="`pkg-config --variable=sourcesdir monodoc`"
 fi
 AC_SUBST(MDASSEMBLER)
-AC_SUBST(MONODOCER)
+AC_SUBST(MDOC)
 
 AM_CONDITIONAL(ENABLE_MONODOC, test "x$enable_monodoc" = "xyes")
 dnl Check for WebKit
