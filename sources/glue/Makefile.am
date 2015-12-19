@@ -15,4 +15,6 @@ libwebkitgtksharpglue.dll: $(libwebkitgtksharpglue_1_10_2_la_OBJECTS) libwebkitg
 
 CLEANFILES = lib*.a lib*.dll
 
+DISTCLEANFILES = $(nodist_libwebkitgtksharpglue_1_10_2_la_SOURCES)
+
 EXTRA_DIST =
