@@ -10,15 +10,13 @@ endif
 
 ASSEMBLIES = $(top_srcdir)/out/$(ASSEMBLY_NAME).dll
 
-UPDATE_ASSEMBLIES = $(addprefix -assembly:, $(ASSEMBLIES))
-
 all: $(TARGETS)
 
 update:
-	$(MONODOCER) $(UPDATE_ASSEMBLIES) -path:en
+	$(MDOC) update $(SOUPSHARP_LIBS) --out=en $(ASSEMBLIES)
 
 $(srcdir)/en/*/*.xml $(srcdir)/en/*.xml:
-	$(MONODOCER) $(UPDATE_ASSEMBLIES) -path:en
+	$(MDOC) update $(SOUPSHARP_LIBS) --out=en $(ASSEMBLIES)
 
 $(ASSEMBLY_NAME)-docs.source:
 	@echo "Generating $@"
@@ -31,6 +29,7 @@ $(ASSEMBLY_NAME)-docs.zip $(ASSEMBLY_NAME)-docs.tree: $(srcdir)/en/*/*.xml $(src
 	$(MDASSEMBLER) --ecma $(srcdir)/en -o $(ASSEMBLY_NAME)-docs
 
 CLEANFILES = $(TARGETS)
+DISTCLEANFILES = $(srcdir)/en/*/*.xml $(srcdir)/en/*.xml
 
 NAMESPACES=$(ASSEMBLY_NAMESPACE)
 
